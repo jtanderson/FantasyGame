@@ -19,10 +19,21 @@ public class Main {
 
     while(!stateStack.isEmpty()) {
       currentState = stateStack.pop();
-      // TODO: Random combat, push old one back down for when combat is done
 
-      currentState.printMenu();
-      currentState.handleInput(player, input.nextLine(), stateStack);
+      // Random combat encounter , push old one back for when combat is done
+      if(Math.random() > (1-currentState.combatProbability)){
+        stateStack.push(currentState);
+        CombatState cs = new CombatState();
+        currentState = cs;
+      }
+
+      currentState.enter(); // Set up the scene if necessary
+
+      currentState.printMenu(); // Print the current options to the user
+
+      currentState.handleInput(player, input.nextLine(), stateStack); // Run game logic based on choice
+
+      currentState.exit(); // Teardown
     }
   }
 }

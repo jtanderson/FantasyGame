@@ -3,6 +3,11 @@ package edu.salisbury.jtanderson;
 import java.util.Stack;
 
 public class CombatState extends GameState {
+    private boolean newEncounter = true;
+
+    public final int ATTACK = 1;
+    public final int RETREAT = 2;
+
     public CombatState(){
         /**
          * 1. Generate random monster(s)
@@ -27,10 +32,35 @@ public class CombatState extends GameState {
          *   ii.  If fail, monster still attacks
          *   iii. If succeed, go to travel state
          */
+
+        int choice = Integer.parseInt(s);
+        switch(choice){
+            case ATTACK:
+                System.out.println("You attack.");
+                stack.push(this);
+                break;
+            case RETREAT:
+                System.out.println("You Run.");
+                break;
+            default:
+                System.out.println("Invalid input.");
+                stack.push(this);
+        }
     }
 
     @Override
     public void printMenu() {
-
+        //System.out.println("The [creature] prepares to attack!");
+        System.out.println("1. Attack");
+        System.out.println("2. Run away");
     }
+
+    @Override
+    public void enter(){
+        if (newEncounter) {
+            System.out.println("You enter a hostile [creature!]");
+        }
+        newEncounter = false;
+    }
+
 }
