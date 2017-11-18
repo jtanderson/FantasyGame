@@ -13,6 +13,6 @@ Todo:
   - [ ] CombatState and actions
   - [ ] More idle actions
   - [ ] Character entities
-  - [ ] Simple item/eqipment entities
+  - [ ] Simple item/equipment entities
   - [ ] Random text/description generation engine
  
