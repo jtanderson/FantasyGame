@@ -21,7 +21,7 @@ public class IdleState extends GameState {
   }
 
   @Override
-  public void handleInput(String s, Stack<GameState> stack) {
+  public void handleInput(PlayerEntity pc, String s, Stack<GameState> stack) {
     // TODO Auto-generated method stub
     IdleState is;
 

@@ -7,6 +7,7 @@ Done:
   - [x] TravelingState (keep walking, stop and rest, take forks)
   - [x] Random road forks
   - [x] Cardinal direction tracking
+  - [x] Allow handlers to take player entity arg
 
 Todo:
   - [ ] CombatState and actions
