@@ -19,6 +19,19 @@ This program is not under active development, and is instead intended as a start
         1. The user input
         1. The player character object
         1. The current stack of states -- so that it can push the next state or more if needed
+        
+### Class Hierarchy
+
+`Entity`    -- the parent of all "objects" in the world (players, creatures, items)
+
+Extended by: `LivingEntity`, `PlayerEntity`
+
+`GameState` -- the parent of all game states. Has member methods 
+
+1. `handleInput(PlayerEntity pc, String s, Stack<GameState> stack)`
+1. `printMenu()`
+
+Extended by: `TravelingState`, `IdleState`, `CombatState`
 
 ## Features
 
