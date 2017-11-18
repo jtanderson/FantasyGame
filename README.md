@@ -14,3 +14,4 @@ Todo:
   - [ ] Character entities
   - [ ] Simple item/eqipment entities
   - [ ] Random text/description generation engien
+ 
