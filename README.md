@@ -14,5 +14,5 @@ Todo:
   - [ ] More idle actions
   - [ ] Character entities
   - [ ] Simple item/eqipment entities
-  - [ ] Random text/description generation engien
+  - [ ] Random text/description generation engine
  
